@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    
+    h1, h2, h3 {
+      font-weight: 600; 
+    }
+
+    p {
+      font-weight: 300;
+    }
+
+    header {
+      background: #007bff;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    nav {
+      background: #222;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      padding: 0.5rem 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    #about, #education, #projects, #contact  {
+      background: #f4f4f4;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.5rem 1.5rem;
+      color: #fff;
+      background: #007bff;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 1rem;
+    }
+
+    .btn:hover {
+      background: #0056b3;
+    }
+
+  #education {
+  background-color: #f4f4f4; 
+  padding: 50px 20px; 
+  margin: 40px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#education h2 {
+  text-align: center; 
+  font-size: 2.5em; 
+  color: #333; 
+  margin-bottom: 40px;
+}
+
+.education-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; 
+}
+
+.education-item {
+  background-color: #fff;
+  padding: 20px;
+  border-left: 5px solid #4CAF50; 
+  border-radius: 8px; 
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.education-item h3 {
+  color: #333; 
+  font-size: 1.8em; 
+}
+
+.education-item p {
+  color: #555; 
+  font-size: 1em;
+}
+
+.education-item strong {
+  color: #4CAF50; 
+  font-weight: bold; 
+}
+
+
+    .skills ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .skills ul li {
+      background: #007bff;
+      color: #fff;
+      margin: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+    }
+
+    #projects {
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+.project h3 {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.project p {
+  color: #555;
+}
+
+.project a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.project a:hover {
+  background-color: #0056b3;
+}
+
+#add-project-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+#add-project-btn:hover {
+  background-color: #218838;
+}
+
+#add-project-form {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+#add-project-form input,
+#add-project-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#add-project-form button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+#add-project-form button:hover {
+  background-color: #0056b3;
+}
+
+
+    .contact-form {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .contact-form button {
+      width: 100%;
+      padding: 0.8rem;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  .profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 1rem auto;
+  display: block;
+  border: 3px solid #007bff;
+}
+.social-links {
+  margin-top: 1rem;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #007bff;
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+
+.social-links a:hover {
+  color: #0056b3;
+}
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Aleem Ghafoor</h1>
+    <p>Web Developer | Programmer | Designer</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="WhatsApp Image 2024-11-19 at 14.58.27_156da669.jpg" alt="Your Profile Photo" class="profile-photo">
+    <p>Hello! I'm a passionate developer specializing in creating dynamic and beautiful web applications. I enjoy learning new technologies and solving challenging problems.</p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/your-github-profile" target="_blank">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="https://medium.com/@your-medium-profile" target="_blank">
+        <i class="fab fa-medium"></i> Medium
+      </a>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="education-container">
+      <!-- Education 1 -->
+      <div class="education-item">
+        <h3>Higher Education</h3>
+        <p><strong>Civilin College Lahore</strong> | 2023 - 2024</p>
+        <p>Majors: Mathematics, Physics, Chemistry</p>
+      </div>
+    </div><br>
+      <!-- Education 2 -->
+      <div class="education-item">
+        <h3>Bachelor of Software Engineering</h3>
+        <p><strong>National University of <br><center>Computer and Emerging Sciences</center></strong> | 2024 onward</p>
+        <p>Relevant Courses: Data Structures, Algorithms, Web Development, Software Engineering</p>
+      </div>
+      
+  </section>
+  
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>C++</li>
+        <li>C</li>
+        <li>Node.js</li>
+        <li>Python</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+  
+    <!-- Existing Projects -->
+    <div class="projects-container">
+      <!-- Project 1 -->
+      <div class="project">
+        <h3>Project Title 1</h3>
+        <p>Short description of the project.</p>
+        <a href="https://link-to-your-project" target="_blank">View Project</a>
+      </div>
+      <!-- Project 2 -->
+      <div class="project">
+        <h3>Project Title 2</h3>
+        <p>Short description of the second project.</p>
+        <a href="https://link-to-your-project" target="_blank">View Project</a>
+      </div>
+    </div>
+  
+    <!-- Button to Add New Project -->
+    <button id="add-project-btn">Add New Project</button>
+  
+    <!-- Add Project Form (Initially Hidden) -->
+    <div id="add-project-form" style="display: none;">
+      <h3>Add Your New Project</h3>
+      <form id="new-project-form">
+        <label for="project-title">Project Title:</label>
+        <input type="text" id="project-title" name="project-title" required><br>
+        
+        <label for="project-description">Description:</label>
+        <textarea id="project-description" name="project-description" required></textarea><br>
+  
+        <label for="project-link">Project Link:</label>
+        <input type="url" id="project-link" name="project-link" required><br>
+  
+        <button type="submit">Add Project</button>
+      </form>
+    </div>
+  </section>
+  
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+     <label for="name">Full Name</label>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" id="name" name="name" required placeholder="Enter your full name"><br><br>
+  
+      <label for="email">Email Address</label>
+     <input type="email" id="email" name="email" required placeholder="Enter your email address"><br><br>
+  
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required placeholder="Enter your message here"></textarea>
+  
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="form-footer"><br>
+      <p>We value your feedback and will respond as soon as possible.</p>
+    </div>
+  </section>
+  
+
+  <footer>
+    <p>© 2024 Aleem Ghafoor. All Rights Reserved.</p>
+  </footer>
+
+</body>
+
+</html>
