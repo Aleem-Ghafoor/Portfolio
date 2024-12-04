@@ -7,238 +7,220 @@
   <title>Aleem Ghafoor</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="website_project.css">
   <style>
-    /* General Reset */
     * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      color: #333;
-      scroll-behavior: smooth;
-      background-color: #f4f4f4;
-    }
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    scroll-behavior: smooth;
+    background-color: #f4f4f4;
+  }
 
-    h1, h2, h3 {
-      font-weight: 600;
-    }
+  h1, h2, h3 {
+    font-weight: 600;
+  }
 
-    p {
-      font-weight: 300;
-      line-height: 1.6;
-    }
+  p {
+    font-weight: 300;
+    line-height: 1.6;
+  }
+  header {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: #fff;
+    text-align: center;
+    padding: 3rem 1rem;
+    position: relative;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.934);
+  }
 
-    /* Header Section */
-    header {
-      background: linear-gradient(90deg, #007bff, #0056b3);
-      color: #fff;
-      text-align: center;
-      padding: 3rem 1rem;
-      position: relative;
-    }
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
 
+  header p {
+    font-size: 1.2rem;
+  }
+  nav {
+    background: #222;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 0.8rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+
+  nav a:hover {
+    color: #007bff;
+  }
+  section {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  #about {
+    background: #fff;
+  }
+
+  #education, #skills, #projects {
+    background: #f9f9f9;
+  }
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 1.5rem auto;
+    border: 4px solid #007bff;
+  }
+  .social-links a {
+    color: #007bff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+  }
+
+  .social-links a:hover {
+    color: #0056b3;
+  }
+  .education-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .education-item {
+    background: #fff;
+    padding: 1.5rem;
+    border-left: 4px solid #007bff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .education-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  .skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .skills ul li {
+    background: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+  }
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .project {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+
+  .project:hover {
+    transform: scale(1.05);
+  }
+
+  .project a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #fff;
+    background: #007bff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  .project a:hover {
+    background: #0056b3;
+  }
+  .contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+
+  .contact-form button {
+    width: 100%;
+    padding: 0.8rem;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+
+  .contact-form button:hover {
+    background: #0056b3;
+  }
+  footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+  }
+  @media (max-width: 768px) {
     header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      font-size: 2rem;
     }
 
     header p {
-      font-size: 1.2rem;
-    }
-
-    /* Navigation */
-    nav {
-      background: #222;
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      padding: 0.8rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      font-size: 1rem;
     }
 
     nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 1rem;
-      font-size: 1rem;
-      transition: color 0.3s;
+      font-size: 0.9rem;
+      margin: 0 0.5rem;
     }
 
-    nav a:hover {
-      color: #007bff;
-    }
-
-    /* Section Styling */
     section {
-      padding: 4rem 2rem;
-      text-align: center;
+      padding: 3rem 1.5rem;
     }
-
-    #about {
-      background: #fff;
-    }
-
-    #education, #skills, #projects {
-      background: #f9f9f9;
-    }
-
-    /* Profile Photo */
-    .profile-photo {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 1.5rem auto;
-      border: 4px solid #007bff;
-    }
-
-    /* Social Links */
-    .social-links a {
-      color: #007bff;
-      margin: 0 10px;
-      font-size: 1.5rem;
-      transition: color 0.3s;
-    }
-
-    .social-links a:hover {
-      color: #0056b3;
-    }
-
-    /* Education Section */
-    .education-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-
-    .education-item {
-      background: #fff;
-      padding: 1.5rem;
-      border-left: 4px solid #007bff;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .education-item h3 {
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
-    }
-
-    /* Skills Section */
-    .skills ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-    }
-
-    .skills ul li {
-      background: #007bff;
-      color: #fff;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-    }
-
-    /* Projects Section */
-    .projects-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .project {
-      background: #fff;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s;
-    }
-
-    .project:hover {
-      transform: scale(1.05);
-    }
-
-    .project a {
-      display: inline-block;
-      margin-top: 1rem;
-      color: #fff;
-      background: #007bff;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      text-decoration: none;
-    }
-
-    .project a:hover {
-      background: #0056b3;
-    }
-
-    /* Contact Section */
-    .contact-form {
-      max-width: 500px;
-      margin: 0 auto;
-      background: #fff;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 0.8rem;
-      margin-bottom: 1rem;
-      border-radius: 5px;
-      border: 1px solid #ddd;
-    }
-
-    .contact-form button {
-      width: 100%;
-      padding: 0.8rem;
-      background: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      font-size: 1.1rem;
-      cursor: pointer;
-    }
-
-    .contact-form button:hover {
-      background: #0056b3;
-    }
-
-    /* Footer */
-    footer {
-      background: #222;
-      color: #fff;
-      text-align: center;
-      padding: 1.5rem 0;
-    }
-
-    /* Media Queries */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
-      header p {
-        font-size: 1rem;
-      }
-
-      nav a {
-        font-size: 0.9rem;
-        margin: 0 0.5rem;
-      }
-
-      section {
-        padding: 3rem 1.5rem;
-      }
-    }
+  }
+  html{
+    scroll-behavior: smooth;
+  }
   </style>
 </head>
 
@@ -258,7 +240,7 @@
     
       <section id="about">
         <h2>About Me</h2>
-        <img src="WhatsApp Image 2024-11-19 at 14.58.27_156da669.jpg" alt="Your Profile Photo" class="profile-photo">
+        <img src="WhatsApp Image 2024-11-28 at 23.01.03_f535cea6.jpg" alt="Your Profile Photo" class="profile-photo">
         <p>Hello! I'm a passionate developer specializing in creating dynamic and beautiful web applications. I enjoy learning new technologies and solving challenging problems.</p>
         <div class="social-links">
           <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">
@@ -314,9 +296,9 @@
         <div class="projects-container">
           <!-- Project 1 -->
           <div class="project">
-            <h3>Project Title 1</h3>
-            <p>Short description of the project.</p>
-            <a href="https://link-to-your-project" target="_blank">View Project</a>
+            <h3>Calculator</h3>
+            <p>A simple, interactive C++ calculator that performs basic operations like addition, subtraction, multiplication, division, modulus, exponentiation, and square root. User-friendly and ideal for learning or quick calculations!</p>
+            <a href=" https://aleem-ghafoor.github.io/Calculator/My calculator" target="_blank">View Project</a>
           </div>
           <!-- Project 2 -->
           <div class="project">
@@ -325,9 +307,6 @@
             <a href="https://link-to-your-project" target="_blank">View Project</a>
           </div>
         </div>
-      
-        <!-- Button to Add New Project -->
-        <button id="add-project-btn">Add New Project</button>
       
         <!-- Add Project Form (Initially Hidden) -->
         <div id="add-project-form" style="display: none;">
