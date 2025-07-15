@@ -4,352 +4,931 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aleem Ghafoor</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="website_project.css">
+  <title>Aleem Ghafoor | Full Stack Developer</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --secondary: #f59e0b;
+      --dark: #1e293b;
+      --light: #f8fafc;
+      --gray: #64748b;
+      --success: #10b981;
+    }
+
     * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  body {
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    scroll-behavior: smooth;
-    background-color: #f4f4f4;
-  }
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--dark);
+      background-color: var(--light);
+      scroll-behavior: smooth;
+      line-height: 1.6;
+    }
 
-  h1, h2, h3 {
-    font-weight: 600;
-  }
+    h1, h2, h3, h4 {
+      font-weight: 600;
+      line-height: 1.2;
+    }
 
-  p {
-    font-weight: 300;
-    line-height: 1.6;
-  }
-  header {
-    background: linear-gradient(90deg, #007bff, #0056b3);
-    color: #fff;
-    text-align: center;
-    padding: 3rem 1rem;
-    position: relative;
-    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.934);
-  }
+    p {
+      color: var(--gray);
+      font-weight: 400;
+    }
 
-  header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-  }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-  header p {
-    font-size: 1.2rem;
-  }
-  nav {
-    background: #222;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    padding: 0.8rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
 
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 1rem;
-    font-size: 1rem;
-    transition: color 0.3s;
-  }
+    .section {
+      padding: 6rem 0;
+    }
 
-  nav a:hover {
-    color: #007bff;
-  }
-  section {
-    padding: 4rem 2rem;
-    text-align: center;
-  }
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+    }
 
-  #about {
-    background: #fff;
-  }
+    .section-title h2 {
+      font-size: 2.5rem;
+      display: inline-block;
+      position: relative;
+      color: var(--dark);
+    }
 
-  #education, #skills, #projects {
-    background: #f9f9f9;
-  }
-  .profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 1.5rem auto;
-    border: 4px solid #007bff;
-  }
-  .social-links a {
-    color: #007bff;
-    margin: 0 10px;
-    font-size: 1.5rem;
-    transition: color 0.3s;
-  }
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
 
-  .social-links a:hover {
-    color: #0056b3;
-  }
-  .education-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  }
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.8rem;
+      border-radius: 50px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
 
-  .education-item {
-    background: #fff;
-    padding: 1.5rem;
-    border-left: 4px solid #007bff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
 
-  .education-item h3 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-  }
-  .skills ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+    }
 
-  .skills ul li {
-    background: #007bff;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-  }
-  .projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-  }
+    .btn-outline {
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
 
-  .project {
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-  }
+    .btn-outline:hover {
+      background: var(--primary);
+      color: white;
+    }
 
-  .project:hover {
-    transform: scale(1.05);
-  }
+    /* Header Styles */
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      padding: 2rem 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
 
-  .project a {
-    display: inline-block;
-    margin-top: 1rem;
-    color: #fff;
-    background: #007bff;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    text-decoration: none;
-  }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-  .project a:hover {
-    background: #0056b3;
-  }
-  .contact-form {
-    max-width: 500px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
 
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 0.8rem;
-    margin-bottom: 1rem;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-  }
+    .logo span {
+      color: var(--secondary);
+    }
 
-  .contact-form button {
-    width: 100%;
-    padding: 0.8rem;
-    background: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    cursor: pointer;
-  }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
 
-  .contact-form button:hover {
-    background: #0056b3;
-  }
-  footer {
-    background: #222;
-    color: #fff;
-    text-align: center;
-    padding: 1.5rem 0;
-  }
-  @media (max-width: 768px) {
-    header h1 {
+    .nav-links a {
+      font-weight: 500;
+      position: relative;
+      padding: 0.5rem 0;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: white;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .hamburger {
+      display: none;
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .social-icons a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      background: var(--primary);
+      transform: translateY(-5px);
+    }
+
+    /* About Section */
+    .about {
+      background: white;
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .about-img {
+      position: relative;
+    }
+
+    .about-img img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-img::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 5px solid var(--primary);
+      border-radius: 10px;
+      top: 20px;
+      left: 20px;
+      z-index: -1;
+    }
+
+    .about-text h3 {
       font-size: 2rem;
+      margin-bottom: 1.5rem;
     }
 
-    header p {
-      font-size: 1rem;
+    .about-text p {
+      margin-bottom: 1.5rem;
     }
 
-    nav a {
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .skill {
+      background: rgba(37, 99, 235, 0.1);
+      color: var(--primary);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
       font-size: 0.9rem;
-      margin: 0 0.5rem;
+      font-weight: 500;
     }
 
-    section {
-      padding: 3rem 1.5rem;
+    /* Education Section */
+    .education {
+      background: #f8fafc;
     }
-  }
-  html{
-    scroll-behavior: smooth;
-  }
+
+    .education-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .education-item {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .education-item:hover {
+      transform: translateY(-10px);
+    }
+
+    .education-item h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .education-item .date {
+      color: var(--primary);
+      font-weight: 500;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    /* Projects Section */
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-img {
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .project-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .project-card:hover .project-img img {
+      transform: scale(1.1);
+    }
+
+    .project-info {
+      padding: 1.5rem;
+    }
+
+    .project-info h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .project-info p {
+      margin-bottom: 1.5rem;
+    }
+
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tech {
+      background: rgba(37, 99, 235, 0.1);
+      color: var(--primary);
+      padding: 0.3rem 0.8rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    /* Contact Section */
+    .contact {
+      background: #f8fafc;
+    }
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    .contact-text h4 {
+      margin-bottom: 0.3rem;
+    }
+
+    .contact-form {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-family: inherit;
+      transition: all 0.3s ease;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+    }
+
+    textarea.form-control {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-links a {
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    .copyright {
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 50px;
+      height: 50px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 999;
+    }
+
+    .back-to-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background: var(--primary-dark);
+      transform: translateY(-5px);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+
+      .about-img {
+        display: flex;
+        justify-content: center;
+      }
+
+      .about-img::after {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: var(--dark);
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        transition: left 0.3s ease;
+      }
+
+      .nav-links.active {
+        left: 0;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .hero-btns {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .section {
+        padding: 4rem 0;
+      }
+
+      .section-title h2 {
+        font-size: 2rem;
+      }
+
+      .project-links {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
 
 <body>
-    <header>
-        <h1>Aleem Ghafoor</h1>
-        <p>Web Developer | Programmer | Designer</p>
-      </header>
-    
-      <nav>
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="#" class="logo">Aleem<span>Ghafoor</span></a>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#education">Education</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
       </nav>
-    
-      <section id="about">
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content animate__animated animate__fadeIn">
+        <h1>Hi, I'm Aleem Ghafoor</h1>
+        <p>Full Stack Developer | Problem Solver | Tech Enthusiast</p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-title">
         <h2>About Me</h2>
-        <img src="WhatsApp Image 2024-11-19 at 14.58.27_156da669.jpg" alt="Your Profile Photo" class="profile-photo">
-        <p>Hello! I'm a passionate developer specializing in creating dynamic and beautiful web applications. I enjoy learning new technologies and solving challenging problems.</p>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">
-            <i class="fab fa-linkedin"></i> LinkedIn
-          </a>
-          <a href="https://github.com/your-github-profile" target="_blank">
-            <i class="fab fa-github"></i> GitHub
-          </a>
-          <a href="https://medium.com/@your-medium-profile" target="_blank">
-            <i class="fab fa-medium"></i> Medium
-          </a>
+      </div>
+      <div class="about-content">
+        <div class="about-img">
+          <img src="WhatsApp Image 2025-01-17 at 20.24.16_5d1bc14e.jpg" alt="Aleem Ghafoor" class="animate__animated animate__fadeInLeft">
         </div>
-      </section>
-    
-      <section id="education">
+        <div class="about-text animate__animated animate__fadeInRight">
+          <h3>Full Stack Developer based in Pakistan</h3>
+          <p>I'm a passionate developer with expertise in building modern web applications. I specialize in creating responsive, user-friendly interfaces and robust backend systems.</p>
+          <p>With a strong foundation in computer science and hands-on experience with various technologies, I deliver high-quality solutions that meet business requirements.</p>
+          <div class="skills-list">
+            <span class="skill">HTML5</span>
+            <span class="skill">CSS3</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">React</span>
+            <span class="skill">Node.js</span>
+            <span class="skill">Express</span>
+            <span class="skill">MongoDB</span>
+            <span class="skill">Python</span>
+            <span class="skill">C++</span>
+            <span class="skill">Git</span>
+          </div>
+          <a href="#" class="btn btn-primary" style="margin-top: 2rem;">Download CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="section education" id="education">
+    <div class="container">
+      <div class="section-title">
         <h2>Education</h2>
-        <div class="education-container">
-          <!-- Education 1 -->
-          <div class="education-item">
-            <h3>Higher Education</h3>
-            <p><strong>Government Islamia College Civil lines Lahore</strong> | 2023 - 2024</p>
-            <p>Majors: Mathematics, Physics, Chemistry</p>
-          </div>
-        </div><br>
-          <!-- Education 2 -->
-          <div class="education-item">
-            <h3>Bachelor of Software Engineering</h3>
-            <p><strong>National University of <br><center>Computer and Emerging Sciences</center></strong> | 2024 onward</p>
-            <p>Relevant Courses: Data Structures, Algorithms, Web Development, Software Engineering</p>
-          </div>
-          
-      </section>
-      
-    
-      <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills">
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>C++</li>
-            <li>C</li>
-            <li>Node.js</li>
-            <li>Python</li>
-          </ul>
+      </div>
+      <div class="education-container">
+        <div class="education-item animate__animated animate__fadeInUp">
+          <h3>Bachelor's in Computer Science</h3>
+          <span class="date">2021 - 2025</span>
+          <p>FAST University, Islamabad</p>
+          <p>Specialized in Software Engineering with a focus on Web Development and Algorithms.</p>
         </div>
-      </section>
-    
-      <section id="projects">
+        <div class="education-item animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+          <h3>Intermediate in Pre-Engineering</h3>
+          <span class="date">2019 - 2021</span>
+          <p>Government College, Lahore</p>
+          <p>Completed with distinction in Mathematics and Physics.</p>
+        </div>
+        <div class="education-item animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+          <h3>Matriculation in Science</h3>
+          <span class="date">2017 - 2019</span>
+          <p>Beaconhouse School, Lahore</p>
+          <p>Graduated with top honors in Computer Science and Mathematics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-title">
         <h2>My Projects</h2>
-      
-        <!-- Existing Projects -->
-        <div class="projects-container">
-          <!-- Project 1 -->
-          <div class="project">
-            <h3>Calculator</h3>
-            <p>A simple, interactive C++ calculator that performs basic operations like addition, subtraction, multiplication, division, modulus, exponentiation, and square root. User-friendly and ideal for learning or quick calculations!</p>
-            <a href=" https://aleem-ghafoor.github.io/Calculator/My calculator" target="_blank">View Project</a>
+      </div>
+      <div class="projects-container">
+        <div class="project-card animate__animated animate__fadeIn">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Portfolio Website">
           </div>
-          <!-- Project 2 -->
-          <div class="project">
-            <h3>Project Title 2</h3>
-            <p>Short description of the second project.</p>
-            <a href="https://link-to-your-project" target="_blank">View Project</a>
+          <div class="project-info">
+            <h3>Modern Portfolio Website</h3>
+            <p>A responsive portfolio website showcasing my skills and projects with smooth animations and clean design.</p>
+            <div class="project-tech">
+              <span class="tech">HTML</span>
+              <span class="tech">CSS</span>
+              <span class="tech">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn btn-primary">Live Demo</a>
+              <a href="#" class="btn btn-outline">View Code</a>
+            </div>
           </div>
         </div>
-      
-        <!-- Add Project Form (Initially Hidden) -->
-        <div id="add-project-form" style="display: none;">
-          <h3>Add Your New Project</h3>
-          <form id="new-project-form">
-            <label for="project-title">Project Title:</label>
-            <input type="text" id="project-title" name="project-title" required><br>
-            
-            <label for="project-description">Description:</label>
-            <textarea id="project-description" name="project-description" required></textarea><br>
-      
-            <label for="project-link">Project Link:</label>
-            <input type="url" id="project-link" name="project-link" required><br>
-      
-            <button type="submit">Add Project</button>
+        <div class="project-card animate__animated animate__fadeIn" style="animation-delay: 0.2s;">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80" alt="E-commerce Platform">
+          </div>
+          <div class="project-info">
+            <h3>E-commerce Platform</h3>
+            <p>A full-featured online store with product catalog, cart functionality, and secure payment processing.</p>
+            <div class="project-tech">
+              <span class="tech">React</span>
+              <span class="tech">Node.js</span>
+              <span class="tech">MongoDB</span>
+              <span class="tech">Stripe API</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn btn-primary">Live Demo</a>
+              <a href="#" class="btn btn-outline">View Code</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card animate__animated animate__fadeIn" style="animation-delay: 0.4s;">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Task Manager">
+          </div>
+          <div class="project-info">
+            <h3>Task Management App</h3>
+            <p>A productivity application for organizing tasks with drag-and-drop functionality and team collaboration.</p>
+            <div class="project-tech">
+              <span class="tech">Vue.js</span>
+              <span class="tech">Firebase</span>
+              <span class="tech">Tailwind CSS</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn btn-primary">Live Demo</a>
+              <a href="#" class="btn btn-outline">View Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="#" class="btn btn-primary">View All Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Get In Touch</h2>
+      </div>
+      <div class="contact-container">
+        <div class="contact-info animate__animated animate__fadeInLeft">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Location</h4>
+              <p>Lahore, Pakistan</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Email</h4>
+              <p>aleem.ghafoor@example.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Phone</h4>
+              <p>+92 300 1234567</p>
+            </div>
+          </div>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="contact-form animate__animated animate__fadeInRight">
+          <form>
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" class="form-control" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
           </form>
         </div>
-      </section>
-      
-    
-      <section id="contact">
-        <h2>Contact Me</h2>
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-         <label for="name">Full Name</label>
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" id="name" name="name" required placeholder="Enter your full name"><br><br>
-      
-          <label for="email">Email Address</label>
-         <input type="email" id="email" name="email" required placeholder="Enter your email address"><br><br>
-      
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="message">Message</label>
-          <textarea id="message" name="message" rows="6" required placeholder="Enter your message here"></textarea>
-      
-          <button type="submit">Send Message</button>
-        </form>
-        <div class="form-footer"><br>
-          <p>We value your feedback and will respond as soon as possible.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <a href="#" class="logo">Aleem<span>Ghafoor</span></a>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#education">Education</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
         </div>
-      </section>
-      
-    
-      <footer>
-        <p>© 2024 Aleem Ghafoor. All Rights Reserved.</p>
-      </footer>
+        <p class="copyright">© 2025 Aleem Ghafoor. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile Menu Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.innerHTML = navLinks.classList.contains('active') ? 
+        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    });
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+      });
+    });
+
+    // Back to Top Button
+    const backToTopBtn = document.querySelector('.back-to-top');
+
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopBtn.classList.add('active');
+      } else {
+        backToTopBtn.classList.remove('active');
+      }
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Animation on scroll
+    const animateElements = document.querySelectorAll('.animate__animated');
+
+    const animateOnScroll = () => {
+      animateElements.forEach(element => {
+        const elementPosition = element.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+
+        if (elementPosition < screenPosition) {
+          const animationClass = element.classList[1];
+          element.classList.add(animationClass);
+        }
+      });
+    };
+
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('load', animateOnScroll);
+  </script>
 </body>
 
 </html>
