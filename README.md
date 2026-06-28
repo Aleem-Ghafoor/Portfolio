@@ -1,24 +1,43 @@
 ﻿# Aleem Ghafoor Portfolio
 
-Personal portfolio website for Aleem Ghafoor.
+A simple personal portfolio website for Aleem Ghafoor, built with plain HTML and internal CSS.
+
+## Live Website
+
+[View Portfolio](https://aleem-ghafoor.github.io/Portfolio/)
 
 ## Overview
 
-This site presents profile information, skills, projects, and contact links in a single-page HTML portfolio.
+This is a single-page portfolio that includes:
+
+- Hero section
+- About section
+- Skills
+- Education
+- Projects
+- Contact section
+
+## Projects Included
+
+- Modern Portfolio Website
+- DSA Practice
+- C++ Calculator
+- OOP Practice
+- Banking System
+- Linked List & Binary Trees
 
 ## Tech Stack
 
 - HTML
-- CSS
-- JavaScript
-- Font Awesome
-- Google Fonts
+- Internal CSS
+
+No JavaScript, external CSS libraries, icon libraries, or frameworks are used.
 
 ## Run Locally
 
-Open `index.html` in a browser.
+Open `index.html` directly in a browser.
 
-For a local development server:
+You can also run a local server:
 
 ```bash
 python -m http.server 8000
@@ -30,9 +49,6 @@ Then visit:
 http://localhost:8000
 ```
 
-## Recommended Next Steps
+## Author
 
-- Move inline CSS into a separate `styles.css` file.
-- Rename image files to readable names such as `profile.jpg`.
-- Replace placeholder project links with live demos or repository links.
-- Add responsive testing for mobile and tablet screen sizes.
+Aleem Ghafoor
