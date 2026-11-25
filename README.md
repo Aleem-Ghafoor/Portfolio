@@ -1,54 +1,44 @@
-﻿# Aleem Ghafoor Portfolio
+# Aleem Ghafoor — Portfolio
 
-A simple personal portfolio website for Aleem Ghafoor, built with plain HTML and internal CSS.
+A responsive personal portfolio built with semantic HTML, custom CSS, and vanilla JavaScript.
 
-## Live Website
+## Sections
+- Introduction and profile
+- About, education, and skills
+- Internship experience
+- Selected projects
+- Contact links
 
-[View Portfolio](https://aleem-ghafoor.github.io/Portfolio/)
+## Interactions
+- Responsive mobile navigation
+- Scroll progress indicator
+- Scroll-reveal section animations (respects reduced-motion preferences)
+- Project category filters
+- Back-to-top control
+- Copy email button
+- Automatically updated footer year
 
-## Overview
-
-This is a single-page portfolio that includes:
-
-- Hero section
-- About section
-- Skills
-- Education
-- Projects
-- Contact section
-
-## Projects Included
-
-- Modern Portfolio Website
-- DSA Practice
-- C++ Calculator
-- OOP Practice
-- Banking System
-- Linked List & Binary Trees
-
-## Tech Stack
-
-- HTML
-- Internal CSS
-
-No JavaScript, external CSS libraries, icon libraries, or frameworks are used.
-
-## Run Locally
-
-Open `index.html` directly in a browser.
-
-You can also run a local server:
-
-```bash
-python -m http.server 8000
-```
-
-Then visit:
-
+## Project structure
 ```text
-http://localhost:8000
+Portfolio/
+├── index.html
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── main.js
+│   └── images/
+│       └── profile-photo.jpg
+├── cpp-practice/
+│   └── lab-exercise.cpp
+└── README.md
 ```
 
-## Author
+> The existing profile image is still stored under its original WhatsApp-generated filename in this branch. Rename it to `assets/images/profile-photo.jpg` when downloading/cloning and keep the image path in `index.html` in sync.
 
-Aleem Ghafoor
+## Run locally
+Open `index.html` in a browser. No build step or JavaScript framework is required.
+
+## Contact
+- Email: aleemghafoor79@gmail.com
+- LinkedIn: https://www.linkedin.com/in/aleem-ghafoor-ba52603b0
