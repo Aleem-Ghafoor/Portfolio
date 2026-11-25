@@ -6,37 +6,13 @@
   <meta name="description" content="Aleem Ghafoor — Software Engineering student at FAST-NUCES, Web Developer Intern, and AI/ML enthusiast.">
   <meta name="theme-color" content="#0b1020">
   <title>Aleem Ghafoor | Software Engineering Student & Developer</title>
-  <style>
-    :root{--bg:#0b1020;--surface:#111a2e;--surface2:#16223a;--text:#e8eefc;--muted:#a7b4cc;--accent:#67e8f9;--accent2:#818cf8;--line:rgba(180,200,235,.15);--max:1120px}
-    *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:90px}
-    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:radial-gradient(ellipse at 80% 0%,rgba(99,102,241,.16),transparent 35%),var(--bg);color:var(--text);line-height:1.7}
-    a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
-    .wrap{width:min(var(--max),90%);margin:auto}.nav{position:sticky;top:0;z-index:10;background:rgba(11,16,32,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-    .nav-inner{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-size:1.15rem;font-weight:800;letter-spacing:-.04em}.brand span{color:var(--accent)}
-    .links{display:flex;gap:24px;flex-wrap:wrap}.links a{font-size:.92rem;color:var(--muted)}.links a:hover{color:var(--accent)}
-    .hero{padding:105px 0 90px;min-height:580px;display:grid;align-items:center}.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;align-items:center;gap:55px}
-    .eyebrow{display:inline-flex;align-items:center;gap:9px;padding:7px 13px;border:1px solid var(--line);border-radius:99px;color:var(--accent);font-size:.84rem;margin-bottom:22px;background:rgba(103,232,249,.05)}
-    .dot{width:8px;height:8px;border-radius:50%;background:#34d399;box-shadow:0 0 14px #34d399}
-    h1{font-size:clamp(2.7rem,7vw,5.2rem);line-height:1.06;letter-spacing:-.065em;margin-bottom:20px}h1 span{background:linear-gradient(90deg,var(--accent),#a5b4fc);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .lead{font-size:1.15rem;color:var(--muted);max-width:680px;margin-bottom:28px}.actions{display:flex;gap:13px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 19px;border-radius:12px;font-weight:700;border:1px solid var(--line);transition:.2s}
-    .btn.primary{background:linear-gradient(100deg,#0891b2,#6366f1);border:0;color:white}.btn:hover{transform:translateY(-2px);border-color:var(--accent)}
-    .portrait{width:min(270px,75vw);aspect-ratio:1;border-radius:28px;object-fit:cover;border:1px solid rgba(103,232,249,.4);box-shadow:0 25px 80px rgba(34,211,238,.12);justify-self:center}
-    section{padding:78px 0}.section-head{margin-bottom:32px}.kicker{color:var(--accent);font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.16em}.section-head h2{font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.045em;margin-top:7px}.section-head p{color:var(--muted);max-width:680px;margin-top:8px}
-    .about-grid,.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}.panel,.card{background:linear-gradient(145deg,rgba(22,34,58,.92),rgba(17,26,46,.94));border:1px solid var(--line);border-radius:20px;padding:26px}
-    .panel p{color:var(--muted);margin-top:10px}.facts{display:grid;gap:14px}.fact{padding:17px 19px;border:1px solid var(--line);border-radius:15px;background:rgba(17,26,46,.65)}.fact small{display:block;color:var(--accent);text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;font-weight:800}.fact strong{display:block;margin-top:4px}
-    .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.chip{border:1px solid rgba(103,232,249,.2);background:rgba(103,232,249,.07);color:#c9f7ff;padding:7px 12px;border-radius:9px;font-size:.88rem}
-    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{display:flex;flex-direction:column;min-height:230px}.card-top{display:flex;justify-content:space-between;gap:14px;align-items:center}.card h3{font-size:1.18rem}.tag{font-size:.75rem;color:var(--accent);border:1px solid var(--line);border-radius:99px;padding:4px 9px;white-space:nowrap}.card p{color:var(--muted);margin:13px 0 17px}.card .chips{margin-top:auto;margin-bottom:17px}.card-link{color:var(--accent);font-weight:700}.card-link:hover{text-decoration:underline}
-    .timeline{display:grid;gap:16px}.timeline-item{border-left:2px solid var(--accent2);padding:2px 0 4px 20px}.timeline-item h3{font-size:1.1rem}.timeline-item p,.timeline-item time{color:var(--muted)}.timeline-item time{font-size:.9rem}
-    .contact-card{background:linear-gradient(145deg,rgba(22,34,58,.92),rgba(17,26,46,.94));border:1px solid var(--line);border-radius:18px;padding:23px}.contact-card h3{margin-bottom:5px}.contact-card p{color:var(--muted);overflow-wrap:anywhere}.contact-card a{color:var(--accent)}.contact-list{display:grid;gap:14px}
-    footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.9rem}.footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
-    @media(max-width:760px){.nav-inner{padding:13px 0;align-items:flex-start;flex-direction:column}.links{gap:14px}.hero{padding:75px 0}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.portrait{grid-row:1;width:190px}.grid{grid-template-columns:1fr}section{padding:60px 0}}
-  </style>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <header class="nav">
     <div class="wrap nav-inner">
       <a class="brand" href="#home">Aleem<span>.</span></a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
       <nav class="links" aria-label="Main navigation">
         <a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
       </nav>
@@ -102,26 +78,32 @@
     <section id="projects">
       <div class="wrap">
         <div class="section-head"><div class="kicker">Selected work</div><h2>Projects</h2><p>A selection of academic and learning projects. Their descriptions reflect the current repository documentation.</p></div>
+        <div class="project-filters" role="group" aria-label="Filter projects">
+          <button class="filter-btn active" type="button" data-project-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" type="button" data-project-filter="ai" aria-pressed="false">AI / ML</button>
+          <button class="filter-btn" type="button" data-project-filter="web" aria-pressed="false">Web</button>
+          <button class="filter-btn" type="button" data-project-filter="cpp" aria-pressed="false">C++</button>
+        </div>
         <div class="grid">
-          <article class="card">
+          <article class="card" data-project-category="ai">
             <div class="card-top"><h3>🛡️ PhishGuard</h3><span class="tag">AI / ML · Django</span></div>
             <p>A Django web application that uses a trained Random Forest model and URL feature extraction to classify URLs as legitimate or phishing, with scan history for authenticated users.</p>
             <div class="chips"><span class="chip">Python</span><span class="chip">Django</span><span class="chip">Scikit-learn</span></div>
             <a class="card-link" href="https://github.com/Aleem-Ghafoor/PhishGuard" target="_blank" rel="noopener noreferrer">View repository ↗</a>
           </article>
-          <article class="card">
+          <article class="card" data-project-category="web">
             <div class="card-top"><h3>🛒 Django Storefront</h3><span class="tag">In development</span></div>
             <p>A Django learning project focused on authentication and core web application concepts. Product management and shopping features are planned, not presented as completed.</p>
             <div class="chips"><span class="chip">Python</span><span class="chip">Django</span><span class="chip">SQLite</span></div>
             <a class="card-link" href="https://github.com/Aleem-Ghafoor/storefront" target="_blank" rel="noopener noreferrer">View repository ↗</a>
           </article>
-          <article class="card">
+          <article class="card" data-project-category="web">
             <div class="card-top"><h3>📚 LearnHub LMS</h3><span class="tag">PHP · MySQL</span></div>
             <p>A role-based learning management system with admin, teacher, and student workflows for courses, lessons, assignments, submissions, and results.</p>
             <div class="chips"><span class="chip">PHP</span><span class="chip">MySQL</span></div>
             <a class="card-link" href="https://github.com/Aleem-Ghafoor/learnhub-lms" target="_blank" rel="noopener noreferrer">View repository ↗</a>
           </article>
-          <article class="card">
+          <article class="card" data-project-category="cpp">
             <div class="card-top"><h3>🧩 DSA Practice</h3><span class="tag">C++</span></div>
             <p>A collection of C++ data structures and algorithm practice, including trees, linked lists, hashing, bit manipulation, and coding-problem solutions.</p>
             <div class="chips"><span class="chip">C++17</span><span class="chip">Data Structures</span><span class="chip">Algorithms</span></div>
@@ -136,7 +118,7 @@
         <div class="section-head"><div class="kicker">Get in touch</div><h2>Let’s connect</h2><p>For opportunities, collaboration, or a conversation about software and AI/ML, feel free to reach out.</p></div>
         <div class="contact-grid">
           <div class="contact-list">
-            <div class="contact-card"><h3>Primary email</h3><p><a href="mailto:aleemghafoor79@gmail.com">aleemghafoor79@gmail.com</a></p></div>
+            <div class="contact-card"><h3>Primary email</h3><p><a href="mailto:aleemghafoor79@gmail.com">aleemghafoor79@gmail.com</a></p><button class="filter-btn" type="button" data-copy-email="aleemghafoor79@gmail.com" style="margin-top:10px">Copy email</button></div>
             <div class="contact-card"><h3>WhatsApp</h3><p><a href="https://wa.me/923214658135" target="_blank" rel="noopener noreferrer">+92 321 4658135 · Message me</a></p></div>
             <div class="contact-card"><h3>LinkedIn</h3><p><a href="https://www.linkedin.com/in/aleem-ghafoor-ba52603b0" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a></p></div>
             <div class="contact-card"><h3>Work / Slack email</h3><p><a href="mailto:aleemghafoor600@gmail.com">aleemghafoor600@gmail.com</a></p></div>
@@ -152,6 +134,9 @@
     </section>
   </main>
 
+  <div id="scroll-progress" aria-hidden="true"></div>
+  <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
   <footer><div class="wrap footer-inner"><span>© <span id="year">2026</span> Aleem Ghafoor</span><span>Built with HTML & CSS · Keep learning, keep building.</span></div></footer>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
